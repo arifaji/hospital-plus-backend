@@ -18,7 +18,6 @@ class AuthController {
       const accessToken = await AuthenticationService.refresh(payload);
       return response.ok({ res, data: { accessToken } });
     } catch (error) {
-      console.log(error);
       return next(error);
     }
   }
